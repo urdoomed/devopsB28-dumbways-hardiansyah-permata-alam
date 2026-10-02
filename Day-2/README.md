@@ -7,7 +7,9 @@ Repositori ini berisi dokumentasi tugas untuk Day-2 pada bootcamp DumbWays.
 
 Seluruh rekaman video presentasi Diagram IP Class C, video Command Linux diakses pada folder Google Drive berikut:
 
-🔗 **[Folder Google Drive - Bukti Tugas Day-2 DevOps]((https://drive.google.com/drive/folders/1Bw10XbuWg9bVp3f8TAenNYfgRPy_J81f?usp=sharing))**
+🔗 **[Folder Google Drive - Bukti Tugas Day-2 DevOps](https://drive.google.com/drive/folders/1Bw10XbuWg9bVp3f8TAenNYfgRPy_J81f?usp=sharing)**
+
+
 
 ---
 
