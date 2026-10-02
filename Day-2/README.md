@@ -1,4 +1,4 @@
-# Tugas Day-2: Basic Shell & Compiter Networking
+# Tugas Day-2: Basic Shell & Computer Networking
 
 ## Deskripsi
 Repositori ini berisi dokumentasi tugas untuk Day-2 pada bootcamp DumbWays.
