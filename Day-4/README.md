@@ -1,19 +1,18 @@
-# Tugas Day-4: introduction Version Control System With Git
+# Tugas Day-4: Git & Manage Repository
 
 ## Deskripsi
-Repositori ini berisi dokumentasi tugas untuk Day-3 pada bootcamp DumbWays.
+Repositori ini berisi dokumentasi tugas untuk Day-4 pada bootcamp DumbWays.
 
-## 📁 Dokumentasi Day 3
+## 📁 Dokumentasi Day 4
 
-Seluruh rekaman video presentasi Konfigurasi SSH, Text Manipulation, Kofigurasi UFW diakses pada folder Google Drive berikut:
+Seluruh rekaman video presentasi  Git & Manage Repository Git
+diakses pada folder Google Drive berikut:
 
-🔗 **[Folder Google Drive - Bukti Tugas Day-2 DevOps](https://drive.google.com/drive/folders/1LprxoI-7yl7wFNdUxA0OfFb1ReJOvgi3?usp=sharing)**
+🔗 **[Folder Google Drive - Bukti Tugas Day-2 DevOps](https://drive.google.com/drive/folders/1IU18_hfW2WMpfuL394J4AqC-qXh6WdsV?usp=sharing)**
 
 ---
 
 ###  Isi Folder :
-1. **Konfigurasi SSH**
-2. **Text Manipulation** 
-3. **Kofigurasi UFW**
-
+1. **Penjelasan Git**
+2. **Manage Repository Git** 
 
