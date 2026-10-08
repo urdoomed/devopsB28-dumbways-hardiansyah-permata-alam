@@ -1,9 +1,9 @@
-# Tugas Day-4: Apllication in Server
+# Tugas Day-5: Apllication in Server
 
 ## Deskripsi
 Repositori ini berisi dokumentasi tugas untuk Day-5 pada bootcamp DumbWays.
 
-## 📁 Dokumentasi Day 4
+## 📁 Dokumentasi Day 5
 
 Seluruh rekaman video presentasi Deploy app wayshub-frontend menggunakan NodeJS, Deploy app menampilkan text nama menggunakan Python, Deploy app menampilkan text Golang geming! menggunakan Golang.
 
