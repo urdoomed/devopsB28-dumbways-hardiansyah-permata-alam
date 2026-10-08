@@ -9,7 +9,7 @@ Seluruh rekaman video presentasi Penjelasan Implementasi Reverse Proxy Pada Web 
 
 diakses pada folder Google Drive berikut:
 
-🔗 **[Folder Google Drive - Bukti Tugas Day-6 DevOps]()**
+🔗 **[Folder Google Drive - Bukti Tugas Day-6 DevOps](https://drive.google.com/drive/folders/1qlZke_b-1b9W1sjfGk8qZZpQ_FJnWozn?usp=drive_link)**
 
 ---
 
