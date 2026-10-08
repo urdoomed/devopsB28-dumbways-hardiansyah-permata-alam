@@ -9,7 +9,7 @@ Seluruh rekaman video presentasi Deploy app wayshub-frontend menggunakan NodeJS,
 
 diakses pada folder Google Drive berikut:
 
-🔗 **[Folder Google Drive - Bukti Tugas Day-5 DevOps](https://drive.google.com/drive/folders/1IU18_hfW2WMpfuL394J4AqC-qXh6WdsV?usp=sharing)**
+🔗 **[Folder Google Drive - Bukti Tugas Day-5 DevOps](https://drive.google.com/drive/folders/12DnhTNV2OmYCz2-tP1ZwedbbRwzjlzLJ?usp=drive_link)**
 
 ---
 
