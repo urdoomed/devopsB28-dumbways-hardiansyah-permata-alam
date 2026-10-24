@@ -3,7 +3,7 @@
 ## Deskripsi
 Repositori ini berisi dokumentasi tugas untuk Week-1 pada bootcamp DumbWays.
 
-## 📁 Dokumentasi Day 6
+## 📁 Dokumentasi Week-1
 
 Seluruh rekaman demo Deploy Server Wayshub-Frontend & Wayshub-Backend, Role Based, Remote User.
 
