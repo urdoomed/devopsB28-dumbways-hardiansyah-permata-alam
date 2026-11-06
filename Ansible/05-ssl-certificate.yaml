@@ -1,0 +1,14 @@
+- name: 5. Generate SSL Certificate
+  hosts: ubuntu-1
+  become: yes
+  tasks:
+    - name: Install Certbot & Nginx
+      ansible.builtin.apt:
+        name: [certbot, python3-certbot-nginx]
+        update_cache: yes
+
+    - name: Generate SSL
+      ansible.builtin.command: >
+        certbot --nginx -d {{ domain_name }} --non-interactive --agree-tos --register-unsafely-without-email --redirect
+      args:
+        creates: /etc/letsencrypt/live/{{ domain_name }}/fullchain.pem

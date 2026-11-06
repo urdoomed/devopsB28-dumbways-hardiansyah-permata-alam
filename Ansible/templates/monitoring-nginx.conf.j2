@@ -1,0 +1,32 @@
+# Grafana Config
+server {
+    listen 80;
+    server_name monitoring-{{ domain_name }};
+    location / {
+        proxy_pass http://127.0.0.1:3001;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+}
+
+# Prometheus Config
+server {
+    listen 80;
+    server_name prom-{{ domain_name }};
+    location / {
+        proxy_pass http://127.0.0.1:9090;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+}
+
+# Node Exporter Config
+server {
+    listen 80;
+    server_name exporter-{{ domain_name }};
+    location / {
+        proxy_pass http://127.0.0.1:9100;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+}

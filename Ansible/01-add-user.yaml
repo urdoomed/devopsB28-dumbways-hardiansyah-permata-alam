@@ -1,0 +1,35 @@
+- name: 1. Add New User with SSH Key and Password
+  hosts: all
+  become: yes
+  tasks:
+    - name: Add New User & Add to sudo Group
+      ansible.builtin.user:
+        name: "{{ new_username }}"
+        password: "{{ new_password | password_hash('sha512') }}"
+        groups: sudo
+        append: yes
+        shell: /bin/bash
+
+    - name: Add SSH Public Key to New User
+      ansible.posix.authorized_key:
+        user: "{{ new_username }}"
+        state: present
+        key: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+
+    - name: Setting SSH Config
+      ansible.builtin.copy:
+        dest: /etc/ssh/sshd_config.d/99-hardening.conf
+        content: |
+          PasswordAuthentication no
+          KbdInteractiveAuthentication no
+          PubkeyAuthentication yes
+        owner: root
+        group: root
+        mode: '0644'
+      notify: Restart SSH
+
+  handlers:
+    - name: Restart SSH
+      ansible.builtin.systemd:
+        name: ssh
+        state: restarted

@@ -1,0 +1,38 @@
+{
+  "version": 4,
+  "terraform_version": "1.17.1",
+  "serial": 3,
+  "lineage": "be52f65f-6ede-eeb3-bc5f-3fb461b0b364",
+  "outputs": {},
+  "resources": [
+    {
+      "mode": "managed",
+      "type": "idcloudhost_floating_ip",
+      "name": "testip",
+      "provider": "provider[\"registry.terraform.io/bapung/idcloudhost\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "address": "103.181.142.88",
+            "assigned_to": "",
+            "billing_account_id": 184057,
+            "created_at": "2026-11-04 01:30:47",
+            "enabled": true,
+            "id": "103.181.142.88",
+            "name": "my-test-ip-01",
+            "network_id": "",
+            "timeouts": null,
+            "type": "public",
+            "updated_at": "2026-11-04 01:30:47",
+            "user_id": 184057
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDB9fQ=="
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}

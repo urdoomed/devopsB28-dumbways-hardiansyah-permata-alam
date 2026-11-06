@@ -1,0 +1,24 @@
+- name: 6. Install Monitoring Agents (Node Exporter & cAdvisor)
+  hosts: all
+  become: yes
+  tasks:
+    - name: Make folder monitoring-agent
+      ansible.builtin.file:
+        path: /home/{{ ansible_user }}/monitoring-agent
+        state: directory
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+        mode: '0755'
+
+    - name: Copy file docker-compose-agent.yml to server
+      ansible.builtin.copy:
+        src: docker-compose-agent.yml
+        dest: /home/{{ ansible_user }}/monitoring-agent/docker-compose.yml
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+        mode: '0644'
+
+    - name: Run Docker Compose Agent
+      community.docker.docker_compose_v2:
+        project_src: /home/{{ ansible_user }}/monitoring-agent
+        state: present

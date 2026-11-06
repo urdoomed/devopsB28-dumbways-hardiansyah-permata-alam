@@ -1,0 +1,34 @@
+- name: 8. Setup Monitoring Nginx & SSL
+  hosts: monitoring
+  become: yes
+  tasks:
+    - name: Nginx Copy Template
+      ansible.builtin.template:
+        src: monitoring-nginx.conf.j2
+        dest: /etc/nginx/sites-available/monitoring
+      notify: Restart Nginx
+
+    - name: Active site Nginx
+      ansible.builtin.file:
+        src: /etc/nginx/sites-available/monitoring
+        dest: /etc/nginx/sites-enabled/monitoring
+        state: link
+
+    - name: Install Certbot & Nginx
+      ansible.builtin.apt:
+        name:
+          - certbot
+          - python3-certbot-nginx
+        update_cache: yes
+
+    - name: Generate SSL Certificate
+      ansible.builtin.command: >
+        certbot --nginx -d monitoring-{{ domain_name }} -d prom-{{ domain_name }} -d exporter-{{ domain_name }} --non-interactive --agree-tos --register-unsafely-without-email --redirect
+      args:
+        creates: /etc/letsencrypt/live/monitoring-{{ domain_name }}/fullchain.pem
+
+  handlers:
+    - name: Restart Nginx
+      ansible.builtin.systemd:
+        name: nginx
+        state: restarted

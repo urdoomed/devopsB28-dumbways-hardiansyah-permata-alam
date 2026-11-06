@@ -1,0 +1,8 @@
+- import_playbook: 01-add-user.yaml
+- import_playbook: 02-docker-installation.yaml
+- import_playbook: 03-deploy-frontend.yaml
+- import_playbook: 04-reverse-proxy.yaml
+- import_playbook: 05-ssl-certificate.yaml
+- import_playbook: 06-install-agents.yaml
+- import_playbook: 07-monitoring-server.yaml
+- import_playbook: 08-monitoring-proxy-ssl.yaml

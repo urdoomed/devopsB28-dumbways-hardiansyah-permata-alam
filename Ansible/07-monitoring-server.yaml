@@ -1,0 +1,32 @@
+- name: 7. Deploy Prometheus & Grafana
+  hosts: monitoring
+  become: yes
+  tasks:
+    - name: Make Config Folder
+      ansible.builtin.file:
+        path: /home/{{ ansible_user }}/monitoring-stack/prometheus
+        state: directory
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+        mode: '0755'
+
+    - name: Copy prometheus.yml
+      ansible.builtin.copy:
+        src: prometheus.yml
+        dest: /home/{{ ansible_user }}/monitoring-stack/prometheus/prometheus.yml
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+        mode: '0644'
+
+    - name: Copy docker-compose-monitoring.yml to server
+      ansible.builtin.copy:
+        src: docker-compose-monitoring.yml
+        dest: /home/{{ ansible_user }}/monitoring-stack/docker-compose.yml
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+        mode: '0644'
+
+    - name: Run Prometheus & Grafana
+      community.docker.docker_compose_v2:
+        project_src: /home/{{ ansible_user }}/monitoring-stack
+        state: present

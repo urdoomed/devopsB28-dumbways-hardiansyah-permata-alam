@@ -1,0 +1,7 @@
+[ubuntu]
+ubuntu-1 ansible_host=103.23.199.222 ansible_user=alam
+ubuntu-2 ansible_host=103.49.238.16 ansible_user=alam
+ubuntu-3 ansible_host=103.49.238.41 ansible_user=alam
+
+[monitoring]
+ubuntu-3 ansible_host=103.49.238.41 ansible_user=alam
