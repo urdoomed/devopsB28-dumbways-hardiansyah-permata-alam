@@ -1,0 +1,10 @@
+.ssh/id_rsa
+Ansible/group_vars/all
+# Abaikan semua file tersembunyi (dotfiles) di home directory
+.*
+
+# Pengecualian: Jangan abaikan file .gitignore itu sendiri
+!.gitignore
+
+# Abaikan folder Ansible cache
+.ansible/
